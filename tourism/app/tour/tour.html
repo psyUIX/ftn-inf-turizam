@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourApp - Ture</title>
+    <link rel="stylesheet" href="../../dist/styles.css">
+    <link rel="stylesheet" href="../../dist/tour/tour.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="title">TourApp</h1>
+        <ul class="nav-links">
+            <li><a href="../contact/contact.html">Kontakt</a></li>
+            <li><a href="#">Ture</a></li>
+            <li><a href="../restaurant/restaurant.html">Restorani</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-content">
+        <div class="left-panel">
+            <h2 class="section-title">Pregled tura</h2>
+            <table id="tours">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Naziv</th>
+                        <th>Dužina (km)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div id="tour-details" class="details-box" style="display:none;"></div>
+        </div>
+
+        <div class="right-panel">
+            <h2 class="section-title">Dodaj turu</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="naziv">Naziv:</label>
+                    <input type="text" id="naziv" name="naziv" placeholder="Unesite naziv" required>
+                </div>
+                <div class="form-group">
+                    <label for="opis">Opis:</label>
+                    <input type="text" id="opis" name="opis" placeholder="Unesite opis" required>
+                </div>
+                <div class="form-group">
+                    <label for="duzina">Dužina (km):</label>
+                    <input type="number" id="duzina" name="duzina" placeholder="Unesite dužinu" required>
+                </div>
+                <div class="form-group">
+                    <label>Tagovi:</label>
+                    <div class="tag-container" id="tagContainer">
+                        <div class="tag-input">
+                            <input type="text" name="tags" placeholder="Unesite tag">
+                            <button type="button" onclick="addTagField()">+</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="submitBtn" class="btn-add">Dodaj</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="tour.js"></script>
+</body>
+</html>
